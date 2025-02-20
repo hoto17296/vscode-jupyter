@@ -1,0 +1,35 @@
+{
+  "name": "vscode-jupyter",
+  "dockerComposeFile": ["compose.yml"],
+  "service": "workspace",
+  "workspaceFolder": "/workspace",
+  "postCreateCommand": ".devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.black-formatter",
+        "ms-python.isort",
+        "ms-python.python",
+        "ms-toolsai.jupyter"
+      ],
+      "settings": {
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.black-formatter",
+          "editor.formatOnSave": true,
+          "editor.formatOnSaveMode": "file",
+          "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+          }
+        },
+        "python.languageServer": "Pylance",
+        "python.analysis.typeCheckingMode": "basic",
+        "python.analysis.extraPaths": ["/workspace/backend/.venv/lib/python3.13/site-packages"],
+        "black-formatter.args": ["--target-version=py313", "--line-length=120"],
+        "isort.args": ["--profile=black"],
+        "notebook.formatOnSave.enabled": true,
+        "notebook.formatOnCellExecution": true,
+        "remote.autoForwardPorts": false
+      }
+    }
+  }
+}

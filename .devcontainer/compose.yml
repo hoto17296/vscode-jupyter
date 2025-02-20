@@ -1,0 +1,10 @@
+services:
+  workspace:
+    image: python:3.13
+    command: sleep infinity
+    volumes:
+      - ..:/workspace:delegated
+      - cache:/root/.cache:delegated
+
+volumes:
+  cache:
