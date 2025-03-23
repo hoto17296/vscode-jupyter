@@ -23,7 +23,6 @@
         },
         "python.languageServer": "Pylance",
         "python.analysis.typeCheckingMode": "basic",
-        "python.analysis.extraPaths": ["/workspace/backend/.venv/lib/python3.13/site-packages"],
         "black-formatter.args": ["--target-version=py313", "--line-length=120"],
         "isort.args": ["--profile=black"],
         "notebook.formatOnSave.enabled": true,
