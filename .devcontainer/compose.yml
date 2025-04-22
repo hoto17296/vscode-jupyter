@@ -3,7 +3,7 @@ services:
     image: python:3.13
     command: sleep infinity
     volumes:
-      - ..:/workspace:delegated
+      - ..:/workspace
       - cache:/root/.cache:delegated
 
 volumes:
